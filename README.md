@@ -30,10 +30,10 @@ Something like:
 ```
  val personDto = PersonDto("John Doe", 30U)
  val reMapper = ReMapper()
- val mappedObject = reMapper.map(personDto, PersonModel::class)
+ val personModel = reMapper.map(personDto, PersonModel::class)
 ```
 
-ReMapper does exactly this.
+ReMapper does exactly this. 🔥
 
 You can also use extension function:
 ```
