@@ -1,3 +1,5 @@
+package com.talhahasanzia.remapper
+
 import kotlin.reflect.*
 import kotlin.reflect.full.primaryConstructor
 import kotlin.reflect.full.valueParameters
@@ -48,7 +50,7 @@ class ReMapper {
                 from::class.primaryConstructor!!.valueParameters
             )
         }) to ${clazz.simpleName}(${getFormattedConstructorArguments(constructor.valueParameters)}." +
-                " This might be due to type mismatch or property name mismatch. You can use @AcceptValues() for property mismatch resolution."
+                " This might be due to type mismatch or property name mismatch. You can use @com.talhahasanzia.remapper.AcceptValues() for property mismatch resolution."
     }
 
     private fun getFormattedConstructorArguments(valueParameters: List<KParameter>): String {
